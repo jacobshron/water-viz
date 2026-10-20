@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+h1 {
+    margin-top: 30vh;
+    font-size: clamp(1.8rem, 100px, 10rem);
+    position: sticky;
+    top: 30vh;
+}
+
+h2 {
+    font-size: clamp(1.8rem, 100px, 10rem);
+    margin-top: 3vh;
+}
+
+#scroll-tip {
+    text-align: center;
+    opacity: .7;
+    line-height: 10pt;
+}
+
+/* ----- Intro ----- */
+.intro {
+    height: 600vh;
+    padding: 20px;
+    padding-top: 0px;
+    margin-top: 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.gif {
+    width: 350px;
+    position: fixed;
+    left: -350px;
+    will-change: transform;
+}
+
+.gif-1 { top: 45%; left: 100%;}
+.gif-2 { top: 15%; left: 100%;}
+.gif-3 { top: 65%; left: 100%;}
+.gif-4 { top: 25%; left: 100%;}
+.gif-5 { top: 85%; }
+.gif-6 { top: 35%; }
+.gif-7 { top: -5%; }
+.gif-8 { top: 70%; }
+
+
+/* ----- Part 1 ----- */
+#part-1 {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100vh;
+}
+
+.big-number {
+    font-size: clamp(1.8rem, 200px, 10rem);
+    font-weight: 600;
+}
+
+.story {
+    height: 800vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#map {
+    width: 70%;
+    height: 90vh;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    overflow: hidden;
+    position: sticky;
+    top: 2rem;
+    z-index: -1;
+}
+
+
+
