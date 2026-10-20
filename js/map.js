@@ -1,6 +1,7 @@
 import { initStory } from "./story.js";
+import { MAPBOX_TOKEN } from "../config.js";
 
-mapboxgl.accessToken = window.MAPBOX_TOKEN;
+mapboxgl.accessToken = MAPBOX_TOKEN;
 
 export const map = new mapboxgl.Map({
     container: 'map',
