@@ -1,8 +1,17 @@
+function clamp(value, min = 0, max = 1) {
+    return Math.min(Math.max(value, min), max);
+}
+
+function revealProgress(scrollFraction, start, duration = 0.1) {
+    return clamp((scrollFraction - start) / duration);
+}
+
 export function initIntro() {
     const gifs = document.querySelectorAll('.gif');
     const h1 = document.querySelector('h1');
     const intro = document.querySelector('.intro');
 
+    // gif animation
     window.addEventListener('scroll', () => {
         const introTop = intro.offsetTop;
         const introHeight = intro.offsetHeight;
@@ -23,4 +32,54 @@ export function initIntro() {
         });
         h1.style.opacity = 1 - scrollFraction;
     }, { passive: true });
+
+    // swimming pool viz
+
+    const grid = document.getElementById('pool-grid');
+    const poolDiv = document.getElementById('swimming-pools');
+    const totalRects = 1500;
+
+    const fragment = document.createDocumentFragment();
+
+    for (let i = 0; i < totalRects; i++) {
+        const div = document.createElement('div');
+        div.classList.add('rect');
+        div.style.opacity = 0;
+        fragment.appendChild(div);
+    }
+    grid.appendChild(fragment);
+
+    const rects = grid.querySelectorAll('.rect');
+    let revealedCount = 0;
+
+    function updatePools() {
+        const poolTop = poolDiv.offsetTop;
+        const poolHeight = poolDiv.offsetHeight - 1000;
+        const scrollable = Math.max(poolHeight - window.innerHeight, 1);
+
+        const scrollFraction = clamp(
+            (window.scrollY - poolTop) / scrollable
+        );
+
+        const targetCount = Math.floor(totalRects * scrollFraction);
+
+        // Reveal new rectangles
+        for (let i = 0; i < targetCount; i++) {
+            rects[totalRects - 1 - i].style.opacity = 1;
+        }
+
+        // Hide rectangles again if the user scrolls upward
+        for (let i = targetCount; i < revealedCount; i++) {
+            rects[totalRects - 1 - i].style.opacity = 0;
+        }
+
+        revealedCount = targetCount;
+    }
+
+    window.addEventListener('scroll', updatePools, {passive: true});
+    updatePools();
+    
+
+    
+
 }
