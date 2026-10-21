@@ -7,7 +7,7 @@ export const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/jacobshron/cmvcoyrxa00do01s862g7d8i6',
     center: [-74.2, 41.5],
-    zoom: 7.6,
+    zoom: 7.5,
 
     scrollZoom: false,
     dragPan: false,
@@ -63,7 +63,7 @@ export function initMap() {
             type: 'fill',
             source: 'watersheds',
             paint: {
-                'fill-color': '#1d3557',
+                'fill-color': '#118ab2',
                 'fill-opacity': 0,
                 'fill-outline-color': 'rgb(215, 224, 240)',
             }
@@ -74,7 +74,7 @@ export function initMap() {
             type: 'line',
             source: 'aqueducts',
             paint: {
-                'line-color': '#457b9d',
+                'line-color': '#ffd166',
                 'line-width': 2,
                 'line-opacity': 0
             }
@@ -85,7 +85,7 @@ export function initMap() {
             type: 'line',
             source: 'esopus',
             paint: {
-                'line-color': '#7aadba',
+                'line-color': '#06d6a0',
                 'line-width': 1,
                 'line-opacity': 0
             }
@@ -96,7 +96,7 @@ export function initMap() {
             type: 'fill',
             source: 'reservoirs',
             paint: {
-                'fill-color': '#7aadba',
+                'fill-color': '#06d6a0',
                 'fill-opacity': 0
             }
         });

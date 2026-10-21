@@ -23,7 +23,7 @@ function updateMapLayers() {
     map.setPaintProperty(
         'watersheds-layer',
         'fill-opacity',
-        watersheds * 0.5
+        watersheds * 0.4
     );
 
     map.setPaintProperty(
