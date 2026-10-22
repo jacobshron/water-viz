@@ -79,7 +79,22 @@ export function initIntro() {
     window.addEventListener('scroll', updatePools, {passive: true});
     updatePools();
     
+    // largest fact
 
-    
+    const largestText = document.getElementById('largest');
+    const largestDiv = document.getElementById('largest-fact');
+
+    window.addEventListener('scroll', () => {
+        const largestTop = largestDiv.offsetTop - 800;
+        const largestHeight = largestDiv.offsetHeight;
+        const largestScrollable = Math.max(largestHeight - window.innerHeight, 1);
+
+        const scrollFraction = clamp(
+            (window.scrollY - largestTop) / largestScrollable
+        );
+
+        largestText.style.fontSize = `${24 + 120 * scrollFraction}pt`;
+        largestText.style.fontWeight = 100 + 1000 * scrollFraction;
+    }, {passive: true })
 
 }

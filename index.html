@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>NYC Drinking Water</title>
+        <link rel="icon" type="image/png" href="assets/drop.png"/> 
         <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
         <link href="https://api.mapbox.com/mapbox-gl-js/v3.32.0/mapbox-gl.css" rel="stylesheet"/>
         <script src="https://api.mapbox.com/mapbox-gl-js/v3.32.0/mapbox-gl.js"></script>
@@ -17,14 +18,14 @@
                 <h1>How N.Y.C. Gets Its Water</h1>
                 <p id="scroll-tip">scroll<br><br>&boxv;<br>&darr;</p>
 
-                <img class="gif gif-7" src="gifs/IMG_6629.gif" data-speed="1.2">
-                <img class="gif gif-8" src="gifs/IMG_6630.gif" data-speed="1.4">
-                <img class="gif gif-3" src="gifs/IMG_6625.gif" data-speed="-1.4">
-                <img class="gif gif-4" src="gifs/IMG_6626.gif" data-speed="-1.6">
-                <img class="gif gif-5" src="gifs/IMG_6627.gif" data-speed="1.8">
-                <img class="gif gif-2" src="gifs/IMG_6624.gif" data-speed="-1.2">
-                <img class="gif gif-6" src="gifs/IMG_6628.gif" data-speed="1.1">  
-                <img class="gif gif-1" src="gifs/IMG_6623.gif" data-speed="-1.1">
+                <video autoplay loop muted playsinline preload="none" class="gif gif-7"  data-speed="1.2"><source src="mp4/IMG_6629.mp4"></video>
+                <video autoplay loop muted playsinline preload="none" class="gif gif-8"  data-speed="1.4"><source src="mp4/IMG_6630.mp4"></video>
+                <video autoplay loop muted playsinline preload="none" class="gif gif-3" data-speed="-1.4"><source src="mp4/IMG_6625.mp4"></video>
+                <video autoplay loop muted playsinline preload="none" class="gif gif-4" data-speed="-1.6"><source src="mp4/IMG_6626.mp4"></video>
+                <video autoplay loop muted playsinline preload="none" class="gif gif-5" data-speed="1.8"><source src="mp4/IMG_6627.mp4" ></video>
+                <video autoplay loop muted playsinline preload="none" class="gif gif-2" data-speed="-1.2"><source src="mp4/IMG_6624.mp4" ></video>
+                <video autoplay loop muted playsinline preload="none" class="gif gif-6" data-speed="1.1"><source src="mp4/IMG_6628.mp4" ></video>  
+                <video autoplay loop muted playsinline preload="none" class="gif gif-1" data-speed="-1.1"><source src="mp4/IMG_6623.mp4" ></video>
             </section> 
             <section id="intro-facts">
                     <div class="fact" id="billion">
@@ -44,19 +45,26 @@
                     </div>    
                     <div class="fact" id="onassis">
                         <div>
-                            <img src="gifs/onassis_reservoir.gif" id="onassis-gif">
+                            <video autoplay loop muted playsinline preload="none" id="onassis-gif"><source src="mp4/onassis_reservoir.mp4"></video>
                             <p>or, about</p>
                             <p class="big-number">1</p>
                             <p>Jacqueline Kennedy Onassis Reservoir.</p>
                         </div>
-                    </div>                     
+                    </div>  
+                    <div class="fact" id="largest-fact">
+                        <div>
+                            <p>This is the</p>
+                            <p id="largest">largest</p>
+                            <p>municipal water supply in the nation.</p>
+                        </div>
+                    </div>                   
             </section>
             <section class="story">
                 <div id="map" class="map-container"></div>
-                <p>Rainwater and runoff is collected by two main watersheds...</p>
-                <p>which is stored in 19 reservoirs and<br>3 controlled lakes across 3 reservoir systems...</p>
-                <p class="comment">>> add hover interaction to map</p>
-                <p>which is transported downstate by a system of<br>3 primary underground aqueducts.</p>
+                <p>Rainwater and runoff are collected by two main watersheds...</p>
+                <p>...which is stored in 19 reservoirs and<br>3 controlled lakes across 3 reservoir systems...</p>
+                <p class="comment">>>TODO: add hover interaction to map</p>
+                <p>...and transported downstate by a system of<br>3 primary underground aqueducts.</p>
             </section>   
             
             <p class="comment" style="margin-top: 100vh;">>> TODO: Insert graph of reservoir levels</p>
