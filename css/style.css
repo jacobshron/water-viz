@@ -1,3 +1,11 @@
+:root {
+    --watershed-color: #118ab2;
+    --upstate-reservoir-color: #06d6a0;
+    --controlled-lake-color: #f060d6;
+    --downstate-reservoir-color: #b3b3b3;
+    --aqueduct-color: #ffd166;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -183,7 +191,7 @@ p {
 .story > p:not(.comment) {
     text-align: center;
     margin-top: 50vh;
-    margin-bottom: 150vh;
+    margin-bottom: 100vh;
     text-shadow: 0px 0px 20px rgb(59, 95, 122);
 }
 

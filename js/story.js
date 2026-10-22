@@ -18,7 +18,7 @@ function updateMapLayers() {
     const scrollFraction = clamp((window.scrollY - storyTop)/scrollable);
 
     // step 1: watersheds
-    const watersheds = revealProgress(scrollFraction, 0.1);
+    const watersheds = revealProgress(scrollFraction, 0.05);
 
     map.setPaintProperty(
         'watersheds-layer',
@@ -32,7 +32,7 @@ function updateMapLayers() {
         `rgba(215, 224, 240, ${watersheds})`
     );
     // step 2: reservoirs
-    const reservoirs = revealProgress(scrollFraction, .4);
+    const reservoirs = revealProgress(scrollFraction, .25);
 
     map.setPaintProperty(
         'reservoirs-layer',
@@ -41,7 +41,7 @@ function updateMapLayers() {
     );
 
     // step 3: aqueducts/esopus
-    const aqueducts = revealProgress(scrollFraction, 0.7);
+    const aqueducts = revealProgress(scrollFraction, 0.5);
 
     map.setPaintProperty(
         'aqueducts-layer',
