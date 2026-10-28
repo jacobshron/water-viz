@@ -152,6 +152,7 @@ p {
 
 #largest-fact {
     height: 300vh;
+    margin-bottom: 50vh;
 }
 
 #largest-fact > div {
@@ -185,7 +186,7 @@ p {
     position: sticky;
     top: 5vh;
     margin: 0;
-    z-index: -1;
+    z-index: 0;
 }
 
 .story > p:not(.comment) {
@@ -193,7 +194,24 @@ p {
     margin-top: 50vh;
     margin-bottom: 100vh;
     text-shadow: 0px 0px 20px rgb(59, 95, 122);
+    pointer-events: none;
+    z-index: 1;
 }
 
+/* popup box */
+.mapboxgl-popup-content {
+    color: black;
+    font-family: system-ui, sans-serif;
+    background-color: rgba(200, 200, 200, .5);
+    height: 30px;
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 0px;
+    border: .5px solid rgba(0, 0, 0, .8);
+}
 
+.mapboxgl-popup-tip {
+    display: none !important;
+}
 

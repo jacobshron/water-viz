@@ -71,19 +71,8 @@ export function initMap() {
             source: 'watersheds',
             paint: {
                 'fill-color': `${watershedColor}`,
-                'fill-opacity': 0,
+                'fill-opacity': 0.4,
                 'fill-outline-color': 'rgb(215, 224, 240)',
-            }
-        });
-
-        map.addLayer({
-            id: 'esopus-layer',
-            type: 'line',
-            source: 'esopus',
-            paint: {
-                'line-color': `${upstateReservoirColor}`,
-                'line-width': 1,
-                'line-opacity': 0
             }
         });
 
@@ -107,12 +96,23 @@ export function initMap() {
         });
 
         map.addLayer({
+            id: 'esopus-layer',
+            type: 'line',
+            source: 'esopus',
+            paint: {
+                'line-color': `${upstateReservoirColor}`,
+                'line-width': 1,
+                'line-opacity': 0
+            }
+        });
+
+        map.addLayer({
             id: 'aqueducts-layer',
             type: 'line',
             source: 'aqueducts',
             paint: {
                 'line-color': `${aqueductColor}`,
-                'line-width': 2,
+                'line-width': 1.5,
                 'line-opacity': 0
             }
         });
