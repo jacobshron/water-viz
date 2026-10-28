@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>NYC Drinking Water</title>
         <link rel="icon" type="image/png" href="assets/drop.png"/> 
-        <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
         <link href="https://api.mapbox.com/mapbox-gl-js/v3.32.0/mapbox-gl.css" rel="stylesheet"/>
         <script src="https://api.mapbox.com/mapbox-gl-js/v3.32.0/mapbox-gl.js"></script>
         <link rel="stylesheet" href="css/style.css">
@@ -59,15 +59,17 @@
                         </div>
                     </div>                   
             </section>
-            <section class="story">
+            <section class="map-story">
                 <div id="map" class="map-container"></div>
                 <p>Rainwater and runoff are collected by two main <span style="color: var(--watershed-color);">watersheds</span>...</p>
                 <p>...which are stored in 19<span style="color: var(--upstate-reservoir-color);"> reservoirs</span> and<br>3 <span style="color: var(--controlled-lake-color);">controlled lakes</span> across 3 reservoir systems...</p>
                 <p>...and transported downstate by a<br>system of <span style="color: var(--aqueduct-color);">underground aqueducts</span>.</p>
             </section>   
-            
-            <p class="comment" style="margin-top: 100vh;">>> TODO: Insert graph of reservoir levels</p>
-            <p style="margin-top: 100vh;">To be continued...</p>
+            <section class="graph-story">
+                <div id="reservoir-chart"></div>
+            </section>
+        
+            <p style="margin-top: 100vh; margin-left: 20px; font-size: 24pt;">By Jacob Shron<br>Data Viz, Fall 2026<br>Cooper Union, NYC</p>
             
             
         </main>

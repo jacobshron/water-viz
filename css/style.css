@@ -168,7 +168,7 @@ p {
 
 /* ----- Map Story ----- */
 
-.story {
+.map-story {
     height: 800vh;
     align-items: center;
     display: flex;
@@ -189,7 +189,7 @@ p {
     z-index: 0;
 }
 
-.story > p:not(.comment) {
+.map-story > p:not(.comment) {
     text-align: center;
     margin-top: 50vh;
     margin-bottom: 100vh;
@@ -215,3 +215,33 @@ p {
     display: none !important;
 }
 
+/* ----- reservoir chart ------ */
+.graph-story {
+    margin-top: 90vh;
+}
+
+#reservoir-chart {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    color: white;
+}
+
+#reservoir-chart svg {
+    display: block;
+    overflow: visible;
+}
+
+#reservoir-chart text {
+    fill: white;
+    font-family: system-ui, sans-serif;
+    font-size: 12px;
+}
+
+#reservoir-chart .tick line {
+    stroke: #555;
+}
+
+#reservoir-chart .domain {
+    stroke: #888;
+}

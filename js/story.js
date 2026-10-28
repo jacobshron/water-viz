@@ -1,4 +1,4 @@
-const story = document.querySelector('.story');
+const story = document.querySelector('.map-story');
 
 let activeLayer = null;
 let registeredLayers = [];
@@ -62,7 +62,7 @@ function updateMapLayers(map) {
 
     if (aqueducts > 0.1) {
         nextLayer = 'aqueducts-layer';
-    } else if (reservoirs > 0.7) {
+    } else if (reservoirs > 0.5) {
         nextLayer = 'reservoirs-layer';
     } else if (watersheds > 0.9) {
         nextLayer = 'watersheds-layer';
