@@ -189,11 +189,11 @@ p {
     z-index: 0;
 }
 
-.map-story > p:not(.comment) {
+.map-story > p, .graph-story > p:not(.comment) {
     text-align: center;
     margin-top: 50vh;
     margin-bottom: 100vh;
-    text-shadow: 0px 0px 20px rgb(59, 95, 122);
+    text-shadow: 0px 0px 20px rgb(136, 180, 214);
     pointer-events: none;
     z-index: 1;
 }
@@ -218,13 +218,39 @@ p {
 /* ----- reservoir chart ------ */
 .graph-story {
     margin-top: 90vh;
+    width: 90%;
+    height: 700vh;
+}
+
+.graph-story > h3 {
+    margin-left: 0%;
+}
+
+#graph-text {
+    position: absolute;
+    right: 10%;
+}
+
+#graph-text > p {
+    text-align: right;
+    right: 10%;
+    margin-bottom: 75vh;
+    text-shadow: 0px 0px 20px rgb(202, 209, 214)
 }
 
 #reservoir-chart {
-    width: 90%;
+    width: 100%;
     max-width: 1000px;
     margin: 2rem auto;
     color: white;
+}
+
+#reservoir-chart-div {
+    padding: 15vw;
+    top: 50%;
+    position: sticky;
+    transform: translateY(-50%);
+    z-index: -1;
 }
 
 #reservoir-chart svg {
